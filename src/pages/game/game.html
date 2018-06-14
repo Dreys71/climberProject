@@ -1,0 +1,38 @@
+<!--
+  Generated template for the GamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Game</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<!-- Si une partie en cours -->
+<ion-content padding>
+  <div *ngIf="player">
+    <ion-card>
+      <ion-card-header>
+        {{player.name}}
+      </ion-card-header>
+      <ion-card-content>
+        xp: {{player.xp}} | credit: {{player.credit}}
+      </ion-card-content>
+    </ion-card>
+    <ion-row>
+      <button col-12 ion-button outline (click)="resumeGame()">Reprendre la partie</button>
+    </ion-row>
+    <ion-row>
+      <button col-12 ion-button outline color="danger" (click)="deleteGame()">Supprimer la partie</button>
+    </ion-row>
+  </div>
+  <div *ngIf="!player">
+    <ion-row>
+      <button col-12 ion-button outline (click)="newGame()">Nouvelle partie</button>
+    </ion-row>
+  </div>
+</ion-content>
+<!-- Sinon -->

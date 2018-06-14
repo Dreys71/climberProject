@@ -1,0 +1,50 @@
+<!-- Generated template for the CharacterComponent component -->
+<div>
+  <ion-slides pager>
+    <!-- Stats  -->
+    <ion-slide>
+      <h2>Caractéristiques</h2>
+      <h6>Points restant à attribuer : {{ player.statPoints }}</h6>
+
+      <ion-list>
+        <p>Primaire</p>
+        <ion-item class="caracCont" ion-item>
+          Force : {{ player.str }} + <span color="str"> {{ player.armor.stats.str }}</span>
+          <ion-icon class="btn decre" *ngIf="player.str > stats.str" name="remove-circle" (click)="decrementStat('str')"></ion-icon>
+          <ion-icon class="btn incre" *ngIf="player.statPoints > 0" name="add-circle" (click)="incrementStat('str')"></ion-icon>
+        </ion-item>
+
+        <ion-item class="caracCont" ion-item>
+          Dextérité : {{ player.dex }} + <span color="dex"> {{ player.armor.stats.dex }}</span>
+          <ion-icon class="btn decre" *ngIf="player.dex > stats.dex" name="remove-circle" (click)="decrementStat('dex')"></ion-icon>
+          <ion-icon class="btn incre" *ngIf="player.statPoints > 0" name="add-circle" (click)="incrementStat('dex')"></ion-icon>
+        </ion-item>
+
+        <ion-item class="caracCont" ion-item>
+          Agilité : {{ player.agi }} + <span color="agi"> {{ player.armor.stats.agi }}</span>
+          <ion-icon class="btn decre" *ngIf="player.agi > stats.agi" name="remove-circle" (click)="decrementStat('agi')"></ion-icon>
+          <ion-icon class="btn incre" *ngIf="player.statPoints > 0" name="add-circle" (click)="incrementStat('agi')"></ion-icon>
+        </ion-item>
+
+        <ion-item class="caracCont" ion-item>
+          Intelligence : {{ player.int }} + <span color="int"> {{ player.armor.stats.int }}</span>
+          <ion-icon class="btn decre" *ngIf="player.int > stats.int" name="remove-circle" (click)="decrementStat('agi')"></ion-icon>
+          <ion-icon class="btn incre" *ngIf="player.statPoints > 0" name="add-circle" (click)="incrementStat('agi')"></ion-icon>
+        </ion-item>
+
+        <button *ngIf="statsIsDifferent()" ion-button (click)="saveNewStats()">Confirmer</button>
+
+      </ion-list>
+
+    </ion-slide>
+
+    <!-- Inventory  -->
+    <ion-slide>
+
+      INVENTAIRE
+    </ion-slide>
+
+
+
+  </ion-slides>
+</div>

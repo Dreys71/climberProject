@@ -1,0 +1,45 @@
+page-character-form {
+  .range-bar {
+    height: 5px!important;
+  }
+  ion-range[name="str"] .range-bar-active {
+        background-color: color($colors,str);
+      }
+  ion-range[name="dex"] .range-bar-active {
+    background-color: color($colors,dex);
+  }
+
+  ion-range[name="agi"] .range-bar-active {
+    background-color: color($colors,agi);
+  }
+
+  ion-range[name="int"] .range-bar-active {
+    background-color: color($colors,int);
+  }
+
+  img.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #212121;
+    position: absolute;
+    left: 5px;
+  }
+
+  img.nocircle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+  }
+  .skill-label {
+    position: relative;
+    padding-left: 60px;
+    height: 60px;
+  }
+  .skilldesc {
+    font-size: 9px;
+    color: #212121;
+  }
+}

@@ -1,0 +1,45 @@
+> Global :
+
+	faire une function qui push le personnage avec les objets possédés et le palier actuel sur le local_storage
+	// appel de la fonction a chaque nouveau palier atteint, au lancement du jeu :
+		* on trouve une save donc on l'ouvre
+		* on trouve pas et on creer un perso
+	=> si le perso meurs tous est supprimé et son nom ajouté automatiquement au leederbord via un appel api
+
+API : Api présente pour allez chercher les données du jeu : armes,equipements,reliques,mobs et les ajouter en local storage // au lancement du jeu {{ ou on fait ca en dur }}
+
+> Formulaire de création
+
+	* Pseudo
+	* X points de caracs à répartir 
+		- 4 input number (min 0) avec bouton js pour incrementer/decrementer
+	// Niveau de base 1
+	// Equipement de base
+	// Gold de départ ?
+	// Expérience à 0
+
+> Boutique :
+	* Tous les items seraient affiché avec 3 etat different :
+		0 : Achat impossible
+		1 : Achat Possible
+		2 : Possédé
+
+
+
+> Mobs :
+	* La bdd mob devra posser le montant d'xp apporter par le mobs / par palier
+	* Les caractéristiques devront être unitaire // ex palier 100 le mobs aurais 100 * MOBS.STR, pareil pour l'xp ( 100 * MOBS.XP )
+
+> Combat 
+
+	* l'ordre des tours devra être définit celon l'initiative
+	* calculer l'initiative moyenne de chaque groupe pour déterminer le premier a jouer :
+		- perso avec ini a PLAYER: 60 contre 4 mobs (A: 80,B: 40,C: 20,D: 40) soit 50 de moyenne, l'ordre serai : PLAYER - A - B - D - C
+		- si le groupe de mobs avait une initaiative moyenne supérieur : l'ordre serait : N1_MOB - PLAYER - N2_MOB- N3_MOBS ... // le joueur toujours deuxieme
+
+	* Le focus du joueur sur un groupe de mobs devra toujours être aléatoire. // Augmenter les chances de frapper sur un mobs déja ataqué :
+		// 4 mobs : permier tour (%de chance de focus)
+			;T1: 25 - 25 - 25 - 25 -> ataque sur le premier
+			;T2: 29 - 24 - 24 - 24 -> Ataque le deuxieme
+			;T3: 28 - 28 - 23 - 23 // On ajoute NB_MOBS% de chance sur le mobs ciblé et on enleve 1% aux autres (avec mini 1%)
+				// quand un mobs meurs sont % est divisé par NB_MOB_EN_VIE et redistribué sur les autres

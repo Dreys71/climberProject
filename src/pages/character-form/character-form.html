@@ -1,0 +1,147 @@
+<!--
+  Generated template for the CharacterFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Créer votre personnage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager>
+
+    <ion-slide>
+      <h2>Nom du personnage</h2>
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-label fixed>Nom du personnage</ion-label>
+            <ion-input type="text" [(ngModel)]="character.name" name="name"></ion-input>
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Caractéristiques</h2>
+      <h6>Points restant à attribuer : {{pointLeft()}}</h6>
+      <form>
+        <ion-list>
+          <ion-list-header>
+            Force
+            <ion-badge item-end color="str">{{character.str}}</ion-badge>
+          </ion-list-header>
+          <ion-item>
+            <ion-range [(ngModel)]="character.str" name="str" min="0" [max]="pointLeft() + character.str">
+              <ion-icon color="str" range-left small name="sunny"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list>
+
+
+        <ion-list>
+          <ion-list-header>
+            Dextérité
+            <ion-badge item-end color="dex">{{character.dex}}</ion-badge>
+          </ion-list-header>
+          <ion-item>
+            <ion-range [(ngModel)]="character.dex" name="dex" min="0" [max]="pointLeft() + character.dex">
+              <ion-icon color="dex" range-left small name="sunny"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            Agilité
+            <ion-badge item-end color="agi">{{character.agi}}</ion-badge>
+          </ion-list-header>
+          <ion-item>
+            <ion-range [(ngModel)]="character.agi" name="agi" min="0" [max]="pointLeft() + character.agi">
+              <ion-icon color="agi" range-left small name="sunny"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            Intelligence
+            <ion-badge item-end color="int">{{character.int}}</ion-badge>
+          </ion-list-header>
+          <ion-item>
+            <ion-range [(ngModel)]="character.int" name="int" min="0" [max]="pointLeft() + character.int">
+              <ion-icon color="int" range-left small name="sunny"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Capacités</h2>
+      <ion-list radio-group vertical [(ngModel)]="character.skill">
+        <ion-list-header>
+          Selectionnez un talent
+        </ion-list-header>
+
+
+        <ion-item *ngFor="let skill of skills">
+            <ion-label class="skill-label">
+              <img class="circle" [src]="'assets/img/' + skill.img + 'main.png'">
+              <span>{{skill.name}}<br /> <span class="skilldesc">{{skill.desc }}</span></span>
+            </ion-label>
+            <ion-radio [value]="skill.code"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Equipements</h2>
+
+      <ion-list radio-group vertical [(ngModel)]="character.weapon">
+        <ion-list-header>
+          Selectionnez une arme
+        </ion-list-header>
+
+
+        <ion-item *ngFor="let weapon of (weapons | freeItems)">
+          <ion-label class="skill-label">
+            <img class="nocircle" [src]="'assets/img/' + weapon.img + 'main.png'">
+            <span>{{weapon.name}}<br /> <span class="skilldesc">{{weapon.desc }}</span></span>
+          </ion-label>
+          <ion-radio [value]="weapon"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      <ion-list radio-group vertical [(ngModel)]="character.armor">
+        <ion-list-header>
+          Selectionnez une arme
+        </ion-list-header>
+
+
+        <ion-item *ngFor="let armor of (armors | freeItems)">
+          <ion-label class="skill-label">
+            <img class="nocircle" [src]="'assets/img/' + armor.img + 'main.png'">
+            <span>{{armor.name}}<br /> <span class="skilldesc">{{armor.desc }}</span></span>
+          </ion-label>
+          <ion-radio [value]="armor"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+
+      <button ion-button outline (click)="registerCharacter()">Terminer</button>
+
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,232 @@
+{
+  "weapons": {
+    "1" : {
+      "NAME":"épée de l'apprenti",
+      "CATEGORY":"épée légère",
+      "DMG": {
+        "BASIC": 5,
+        "STR": 0.25,
+        "DEX":0.1,
+        "AGI":0.1,
+        "INT":0.1,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 15,
+            "STR": 0.4,
+            "DEX": 0.1,
+            "AGI":0.1,
+            "INT":0.1
+          },
+          "CHANCE": {
+            "BASIC": 20,
+            "STR": 0,
+            "DEX": 0.1,
+            "AGI": 0.2,
+            "INT": 0
+          }
+        },
+        "FAIL" : {
+          "BASIC": 5,
+          "STR" : 0.2,
+          "DEX" : 0,
+          "AGI" : -0.5,
+          "INT" : -0.1
+        }
+      },
+      "PRICE": 0,
+      "RARITY": 0,
+      "IMG": "weapons/lightsword/1/",
+      "DESC": "Une simple épée, trouvable dans tous les camps d'entrainement."
+    },
+    "2" : {
+      "NAME":"rapière légère",
+      "CATEGORY":"épée légère",
+      "DMG": {
+        "BASIC": 6,
+        "STR": 0.15,
+        "DEX":0.25,
+        "AGI":0.15,
+        "INT":0.05,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 9,
+            "STR": 0.15,
+            "DEX": 0.5,
+            "AGI":0.25,
+            "INT":0.1
+          },
+          "CHANCE": {
+            "BASIC": 10,
+            "STR": 0,
+            "DEX": 0.25,
+            "AGI": 0.2,
+            "INT": 0.2
+          }
+        },
+        "FAIL" : {
+          "BASIC": 5,
+          "STR" : 0.2,
+          "DEX" : -0.3,
+          "AGI" : -0.3,
+          "INT" : -0.1
+        }
+      },
+      "PRICE": 100,
+      "RARITY": 0,
+      "IMG": "weapons/lightsword/2/",
+      "DESC": "Une simple rapière, forgé dans les traditions. Une arme fiable au potentiel limité."
+    },
+    "3" : {
+      "NAME":"épée lourde en fer",
+      "CATEGORY":"épée lourde",
+      "DMG": {
+        "BASIC": 12,
+        "STR": 0.25,
+        "DEX":0.10,
+        "AGI":0.05,
+        "INT":0.01,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 23,
+            "STR": 0.5,
+            "DEX": 0.25,
+            "AGI":0.1,
+            "INT":0.1
+          },
+          "CHANCE": {
+            "BASIC": 5,
+            "STR": 0.25,
+            "DEX": 0.1,
+            "AGI": 0.1,
+            "INT": 0.1
+          }
+        },
+        "FAIL" : {
+          "BASIC": 15,
+          "STR" : 0.15,
+          "DEX" : -0.1,
+          "AGI" : -0.05,
+          "INT" : -0.05
+        }
+      },
+      "PRICE": 250,
+      "RARITY": 0,
+      "IMG": "weapons/heavysword/1/",
+      "DESC": "En voilà une solide épée ! Avec elle, nulle doute vous serez le roi des gros bras !"
+    },
+    "4" : {
+      "NAME":"hallebarde du boucher",
+      "CATEGORY":"épée lourde",
+      "DMG": {
+        "BASIC": 15,
+        "STR": 0.3,
+        "DEX":0.10,
+        "AGI":0.05,
+        "INT":0.01,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 19,
+            "STR": 0.5,
+            "DEX": 0.25,
+            "AGI":0.1,
+            "INT":0.1
+          },
+          "CHANCE": {
+            "BASIC": 0,
+            "STR": 0.25,
+            "DEX": 0.1,
+            "AGI": 0.1,
+            "INT": 0.1
+          }
+        },
+        "FAIL" : {
+          "BASIC": 20,
+          "STR" : 0.10,
+          "DEX" : -0.25,
+          "AGI" : -0.05,
+          "INT" : -0.05
+        }
+      },
+      "PRICE": 750,
+      "RARITY": 1,
+      "IMG": "weapons/heavysword/2/",
+      "DESC": "Cette hallebrade fût l'arme de prédilection des hordes du nord durant la dernière grande guerre."
+    },
+    "5" : {
+      "NAME":"épée en émeraude",
+      "CATEGORY":"épée légère",
+      "DMG": {
+        "BASIC": 11,
+        "STR": 0.15,
+        "DEX":0.15,
+        "AGI":0.15,
+        "INT":0.15,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 17,
+            "STR": 0.20,
+            "DEX": 0.20,
+            "AGI":0.20,
+            "INT":0.20
+          },
+          "CHANCE": {
+            "BASIC": 10,
+            "STR": 0.20,
+            "DEX": 0.20,
+            "AGI": 0.20,
+            "INT": 0.20
+          }
+        },
+        "FAIL" : {
+          "BASIC": 25,
+          "STR" : -0.25,
+          "DEX" : -0.25,
+          "AGI" : -0.25,
+          "INT" : -0.25
+        }
+      },
+      "PRICE": 1750,
+      "RARITY": 2,
+      "IMG": "weapons/heavysword/2/",
+      "DESC": "Cette épée légendaire nécessite une pleine maitrise et équilibre interne de son porteur"
+    },
+    "6" : {
+      "NAME":"épée sacrée en ivoire",
+      "CATEGORY":"épée légère",
+      "DMG": {
+        "BASIC": 19,
+        "STR": 0.30,
+        "DEX":0.30,
+        "AGI":0.10,
+        "INT":0.10,
+        "CRIT": {
+          "DMG": {
+            "BASIC": 34,
+            "STR": 0.40,
+            "DEX": 0.35,
+            "AGI":0.20,
+            "INT":0.20
+          },
+          "CHANCE": {
+            "BASIC": 0,
+            "STR": 0.70,
+            "DEX": 0.50,
+            "AGI": 0.20,
+            "INT": 0.20
+          }
+        },
+        "FAIL" : {
+          "BASIC": 0,
+          "STR" : 0.25,
+          "DEX" : 0.25,
+          "AGI" : 0.25,
+          "INT" : 0.25
+        }
+      },
+      "PRICE": 3250,
+      "RARITY": 3,
+      "IMG": "weapons/lightsword/4/",
+      "DESC": "Cette épée autrefois la propriété d'un chef croisé lors des guerres de civilisation. Elle aurait été forger dans les défenses d'un monstre de l'ancien monde."
+    }
+  }
+}

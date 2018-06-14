@@ -1,0 +1,22 @@
+{
+  "spell" : {
+    "1":{
+        "des": "SPE_CRIT",
+        "name":"Coup mortel",
+        "img": "spells/1/",
+        "desc": "Augmente votre chance d'infligé un coup critique."
+    },
+    "2":{
+      "des": "SPE_DS",
+      "name":"Dernier souffle",
+      "img": "spells/2/",
+      "desc": "Vous avez une chance de survivre à un coup fatal."
+    },
+    "3":{
+      "des": "SPE_HP",
+      "name":"Peau dur",
+      "img": "spells/3/",
+      "desc": "Votre consitution améliore votre vitalité."
+    }
+  }
+}
